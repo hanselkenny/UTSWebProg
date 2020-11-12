@@ -18,10 +18,13 @@
               </div>
               <div class="card-footer">
                 <small class="text-muted">
-                    @for($i=0;$i<(int)$movies->rating;$i++)
-                    &#9733;
-                    @endfor
-                </small>
+                  @for($j=0;$j<(int)$movies->rating;$j++)
+                  &#9733;
+                  @endfor
+                  @for($j=0;$j<5-((int)$movies->rating);$j++)
+                    &#9734;
+                  @endfor
+              </small>
               </div>
             </div>
           </div>

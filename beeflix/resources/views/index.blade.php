@@ -38,7 +38,14 @@
                 <a href="/home/{{$i->id}}">Lihat Film</a>
               </div>
               <div class="card-footer">
-                <small class="text-muted">&#9733; &#9733; &#9733; &#9733; &#9734;</small>
+                <small class="text-muted">
+                    @for($j=0;$j<(int)$i->rating;$j++)
+                    &#9733;
+                    @endfor
+                    @for($j=0;$j<5-((int)$i->rating);$j++)
+                      &#9734;
+                    @endfor
+                </small>
               </div>
             </div>
           </div>

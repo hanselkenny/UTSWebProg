@@ -35,7 +35,7 @@ class HomeController extends Controller
         // Masukkan kode untuk menampilkan data yang lebih spesifik
         $movies = Movie::find($id);
         $genre = Genre::find($movies->genre_id);
-        $episodes = Episode::where('movie_id','like',"%$id%")->paginate(3);
+        $episodes = Episode::where('movie_id','=',$id)->paginate(3);
         return view('detail', [
             'movies' => $movies,
             'genre'=>$genre,

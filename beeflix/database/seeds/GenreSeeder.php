@@ -17,5 +17,8 @@ class GenreSeeder extends Seeder
         DB::table('genres')->insert([
             [ 'name' => 'Kids']
         ]);
+        DB::table('genres')->insert([
+            [ 'name' => 'TV Shows']
+        ]);
     }
 }
